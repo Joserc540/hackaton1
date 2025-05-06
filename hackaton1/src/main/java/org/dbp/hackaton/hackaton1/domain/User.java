@@ -1,6 +1,8 @@
-package org.dbp.hackaton.hackaton1.application;
+package org.dbp.hackaton.hackaton1.domain;
 
 import jakarta.persistence.*;
+
+import java.util.List;
 
 @Entity
 public class User {
