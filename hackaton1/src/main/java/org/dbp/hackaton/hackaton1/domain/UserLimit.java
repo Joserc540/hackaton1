@@ -1,10 +1,14 @@
 package org.dbp.hackaton.hackaton1.domain;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.time.Duration;
 import java.time.Instant;
 
+@Getter
+@Setter
 @Entity
 public class UserLimit {
     @Id
