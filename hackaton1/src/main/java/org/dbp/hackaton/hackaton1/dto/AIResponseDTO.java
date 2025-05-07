@@ -1,14 +1,13 @@
 package org.dbp.hackaton.hackaton1.dto;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
+import org.dbp.hackaton.hackaton1.domain.ModelType;
 
-import java.time.Instant;
-
-@Getter
-@Setter
+@Data
 public class AIResponseDTO {
-    private String response;
+    private String responseText;
     private int tokensUsed;
-    private Instant timestamp;
+    private ModelType modelType;
+    private boolean success;
+    private String errorMessage;
 }

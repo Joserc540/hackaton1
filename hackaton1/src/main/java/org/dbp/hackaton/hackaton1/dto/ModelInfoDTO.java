@@ -3,11 +3,10 @@ package org.dbp.hackaton.hackaton1.dto;
 import lombok.Data;
 import org.dbp.hackaton.hackaton1.domain.ModelType;
 
-import java.util.List;
-
 @Data
-public class AIRequestDTO {
+public class ModelInfoDTO {
     private ModelType modelType;
-    private String prompt;
-    private List<String> fileNames;
+    private String description;
+    private int remainingRequests;
+    private int remainingTokens;
 }
