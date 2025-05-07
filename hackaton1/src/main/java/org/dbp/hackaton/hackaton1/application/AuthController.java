@@ -1,6 +1,7 @@
 package org.dbp.hackaton.hackaton1.application;
 
 import lombok.RequiredArgsConstructor;
+import org.dbp.hackaton.hackaton1.domain.AuthService;
 import org.dbp.hackaton.hackaton1.dto.JwtResponse;
 import org.dbp.hackaton.hackaton1.dto.LoginRequest;
 import org.springframework.http.ResponseEntity;

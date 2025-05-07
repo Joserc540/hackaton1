@@ -12,7 +12,7 @@ public class ModelRestriction {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String modelType;
+    private ModelType modelType;
 
     private int maxRequests;
     private int maxTokens;

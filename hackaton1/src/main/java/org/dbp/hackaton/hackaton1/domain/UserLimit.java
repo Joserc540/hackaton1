@@ -4,9 +4,6 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.time.Duration;
-import java.time.Instant;
-
 @Getter
 @Setter
 @Entity
@@ -15,15 +12,12 @@ public class UserLimit {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Enumerated(EnumType.STRING)
-    private ModelType model;
-
-    private int requestLimit;
-    private int tokenLimit;
-    private Duration window;
-
-    private Instant windowStart;
+    private ModelType modelType;
+    private int maxRequests;
+    private int maxTokens;
+    private String timeWindow;
 
     @ManyToOne
+    @JoinColumn(name = "user_id")
     private User user;
 }
