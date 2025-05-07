@@ -1,12 +1,13 @@
 package org.dbp.hackaton.hackaton1.dto;
 
 import lombok.Data;
-import org.dbp.hackaton.hackaton1.domain.ModelType;
 
 @Data
-public class CreateRestrictionRequest {
-    private ModelType modelType;
+public class ModelRestrictionDTO {
+    private Long id;
+    private String modelType;
     private int maxRequests;
     private int maxTokens;
     private String timeWindow;
+    private Long companyId;
 }
