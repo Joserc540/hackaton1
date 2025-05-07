@@ -4,7 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 import org.dbp.hackaton.hackaton1.domain.ModelType;
 
-import java.time.Instant;
+import java.time.LocalDateTime;
 
 @Getter
 @Setter
@@ -13,7 +13,7 @@ public class RequestLogDTO {
     private String prompt;
     private String response;
     private int tokensUsed;
-    private ModelType model;
-    private Instant timestamp;
+    private ModelType modelType;
+    private LocalDateTime timestamp;
     private String fileName;
 }

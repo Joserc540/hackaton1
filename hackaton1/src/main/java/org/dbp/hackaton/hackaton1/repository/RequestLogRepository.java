@@ -11,8 +11,6 @@ import java.util.List;
 
 @Repository
 public interface RequestLogRepository extends JpaRepository<RequestLog, Long> {
-    List<RequestLog> findByUser(User user);
-    List<RequestLog> findByCompany(Company company);
-    List<RequestLog> findByUserAndModel(User user, ModelType model);
+    List<RequestLog> findByUserId(Long userId);
 }
 

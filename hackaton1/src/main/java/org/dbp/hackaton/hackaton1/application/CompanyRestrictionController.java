@@ -1,10 +1,12 @@
 package org.dbp.hackaton.hackaton1.application;
 
 import lombok.RequiredArgsConstructor;
+import org.dbp.hackaton.hackaton1.domain.RestrictionService;
 import org.dbp.hackaton.hackaton1.dto.CreateRestrictionRequest;
 import org.dbp.hackaton.hackaton1.dto.ModelRestrictionDTO;
 import org.dbp.hackaton.hackaton1.dto.UpdateRestrictionRequest;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

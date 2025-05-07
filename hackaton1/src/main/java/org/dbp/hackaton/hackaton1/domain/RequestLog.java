@@ -1,9 +1,13 @@
 package org.dbp.hackaton.hackaton1.domain;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
-import java.time.Instant;
+import java.time.LocalDateTime;
 
+@Getter
+@Setter
 @Entity
 public class RequestLog {
     @Id
@@ -17,10 +21,10 @@ public class RequestLog {
     private String response;
 
     private int tokensUsed;
-    private Instant timestamp;
+    private LocalDateTime timestamp;
 
     @Enumerated(EnumType.STRING)
-    private ModelType model;
+    private ModelType modelType;
 
     @ManyToOne
     private User user;

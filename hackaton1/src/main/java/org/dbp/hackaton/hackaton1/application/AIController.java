@@ -1,6 +1,7 @@
 package org.dbp.hackaton.hackaton1.application;
 
 import lombok.RequiredArgsConstructor;
+import org.dbp.hackaton.hackaton1.domain.AIService;
 import org.dbp.hackaton.hackaton1.dto.AIRequestDTO;
 import org.dbp.hackaton.hackaton1.dto.AIResponseDTO;
 import org.dbp.hackaton.hackaton1.dto.ModelInfoDTO;
