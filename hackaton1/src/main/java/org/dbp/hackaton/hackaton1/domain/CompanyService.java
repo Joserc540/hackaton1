@@ -7,6 +7,7 @@ import org.dbp.hackaton.hackaton1.dto.CreateCompanyRequest;
 import org.dbp.hackaton.hackaton1.dto.UpdateCompanyRequest;
 import org.dbp.hackaton.hackaton1.repository.CompanyRepository;
 import org.dbp.hackaton.hackaton1.repository.UserRepository;
+import org.springframework.boot.context.config.ConfigDataResourceNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
