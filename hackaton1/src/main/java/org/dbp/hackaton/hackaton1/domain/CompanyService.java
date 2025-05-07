@@ -1,6 +1,7 @@
 package org.dbp.hackaton.hackaton1.domain;
 
 import lombok.RequiredArgsConstructor;
+import org.dbp.hackaton.hackaton1.config.exception.ResourceNotFoundException;
 import org.dbp.hackaton.hackaton1.dto.CompanyConsumptionDTO;
 import org.dbp.hackaton.hackaton1.dto.CompanyDTO;
 import org.dbp.hackaton.hackaton1.dto.CreateCompanyRequest;
