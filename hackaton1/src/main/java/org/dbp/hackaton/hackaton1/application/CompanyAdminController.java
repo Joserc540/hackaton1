@@ -1,5 +1,6 @@
 package org.dbp.hackaton.hackaton1.application;
 
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.dbp.hackaton.hackaton1.domain.CompanyService;
 import org.dbp.hackaton.hackaton1.dto.CompanyConsumptionDTO;
@@ -20,7 +21,7 @@ public class CompanyAdminController {
     private final CompanyService companyService;
 
     @PostMapping
-    public ResponseEntity<CompanyDTO> createCompany(@RequestBody CreateCompanyRequest request) {
+    public ResponseEntity<CompanyDTO> createCompany(@Valid @RequestBody CreateCompanyRequest request) {
         return ResponseEntity.ok(companyService.createCompany(request));
     }
 
@@ -35,7 +36,7 @@ public class CompanyAdminController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<CompanyDTO> updateCompany(@PathVariable Long id, @RequestBody UpdateCompanyRequest request) {
+    public ResponseEntity<CompanyDTO> updateCompany(@PathVariable Long id, @Valid @RequestBody UpdateCompanyRequest request) {
         return ResponseEntity.ok(companyService.updateCompany(id, request));
     }
 

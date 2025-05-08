@@ -1,5 +1,6 @@
 package org.dbp.hackaton.hackaton1.application;
 
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.dbp.hackaton.hackaton1.domain.RestrictionService;
 import org.dbp.hackaton.hackaton1.dto.CreateRestrictionRequest;
@@ -18,7 +19,7 @@ public class CompanyRestrictionController {
     private final RestrictionService restrictionService;
 
     @PostMapping
-    public ResponseEntity<ModelRestrictionDTO> create(@RequestBody CreateRestrictionRequest request) {
+    public ResponseEntity<ModelRestrictionDTO> create(@Valid @RequestBody CreateRestrictionRequest request) {
         return ResponseEntity.ok(restrictionService.create(request));
     }
 
@@ -28,7 +29,7 @@ public class CompanyRestrictionController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<ModelRestrictionDTO> update(@PathVariable Long id, @RequestBody UpdateRestrictionRequest request) {
+    public ResponseEntity<ModelRestrictionDTO> update(@PathVariable Long id, @Valid @RequestBody UpdateRestrictionRequest request) {
         return ResponseEntity.ok(restrictionService.update(id, request));
     }
 
