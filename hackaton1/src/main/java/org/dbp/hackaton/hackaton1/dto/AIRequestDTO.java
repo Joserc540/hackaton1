@@ -1,11 +1,13 @@
 package org.dbp.hackaton.hackaton1.dto;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import org.dbp.hackaton.hackaton1.domain.ModelType;
 
 import java.util.List;
 
-@Data
+@Getter
+@Setter
 public class AIRequestDTO {
     private ModelType modelType;
     private String prompt;
