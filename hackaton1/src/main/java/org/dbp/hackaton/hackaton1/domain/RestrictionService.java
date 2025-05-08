@@ -8,6 +8,7 @@ import org.dbp.hackaton.hackaton1.dto.UpdateRestrictionRequest;
 import org.dbp.hackaton.hackaton1.repository.ModelRestrictionRepository;
 import org.springframework.stereotype.Service;
 
+import java.time.Duration;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -24,7 +25,7 @@ public class RestrictionService {
         restriction.setModelType(request.getModelType());
         restriction.setMaxRequests(request.getMaxRequests());
         restriction.setMaxTokens(request.getMaxTokens());
-        restriction.setTimeWindow(request.getTimeWindow());
+        restriction.setTimeWindow(Duration.parse(request.getTimeWindow()));
         restriction.setCompany(company);
 
         return mapToDTO(restrictionRepository.save(restriction));
@@ -45,7 +46,7 @@ public class RestrictionService {
 
         restriction.setMaxRequests(request.getMaxRequests());
         restriction.setMaxTokens(request.getMaxTokens());
-        restriction.setTimeWindow(request.getTimeWindow());
+        restriction.setTimeWindow(Duration.parse(request.getTimeWindow()));
 
         return mapToDTO(restrictionRepository.save(restriction));
     }

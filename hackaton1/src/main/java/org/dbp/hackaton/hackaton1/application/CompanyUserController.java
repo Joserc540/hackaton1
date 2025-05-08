@@ -1,5 +1,6 @@
 package org.dbp.hackaton.hackaton1.application;
 
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.dbp.hackaton.hackaton1.domain.LimitService;
 import org.dbp.hackaton.hackaton1.domain.UserService;
@@ -18,7 +19,7 @@ public class CompanyUserController {
     private final LimitService limitService;
 
     @PostMapping
-    public ResponseEntity<UserDTO> createUser(@RequestBody CreateUserRequest request) {
+    public ResponseEntity<UserDTO> createUser(@Valid  @RequestBody CreateUserRequest request) {
         return ResponseEntity.ok(userService.create(request));
     }
 
@@ -33,12 +34,12 @@ public class CompanyUserController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<UserDTO> updateUser(@PathVariable Long id, @RequestBody UpdateUserRequest request) {
+    public ResponseEntity<UserDTO> updateUser(@PathVariable Long id, @Valid @RequestBody UpdateUserRequest request) {
         return ResponseEntity.ok(userService.update(id, request));
     }
 
     @PostMapping("/{id}/limits")
-    public ResponseEntity<UserLimitDTO> assignLimit(@PathVariable Long id, @RequestBody AssignLimitRequest request) {
+    public ResponseEntity<UserLimitDTO> assignLimit(@PathVariable Long id, @Valid @RequestBody AssignLimitRequest request) {
         return ResponseEntity.ok(limitService.assignToUser(id, request));
     }
 

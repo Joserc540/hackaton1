@@ -10,4 +10,5 @@ public class AIRequestDTO {
     private ModelType modelType;
     private String prompt;
     private List<String> fileNames;
+    private String fileName;
 }
